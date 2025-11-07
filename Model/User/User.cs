@@ -8,6 +8,9 @@
         public string? Password { get; set; }
         public string? ConfirmationToken { get; set; }
         public bool IsConfirmed { get; set; }
+        public decimal Balance { get; set; } = 0;
+        public decimal TotalIncome { get; set; } = 0;
+        public decimal TotalExpense { get; set; } = 0;
     }
 
 }

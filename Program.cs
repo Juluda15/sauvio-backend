@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
 using Sauvio.Data;
-using Sauvio.Service.Expense;
 using Sauvio.Services.Account;
 using Sauvio.Services.Email;
+using Sauvio.Services.Finance;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +14,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
-builder.Services.AddScoped<IExpenseService, ExpenseService>();
+builder.Services.AddScoped<IFinanceService, FinanceService>();
 
 
 builder.Services.AddControllers();

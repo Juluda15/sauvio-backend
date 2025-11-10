@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\P52\\Desktop\\Sauvio1\\sauvio-backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|c:\\users\\p52\\desktop\\sauvio1\\sauvio-backend\\controllers\\financecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|solutionrelative:controllers\\financecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|c:\\users\\p52\\desktop\\sauvio1\\sauvio-backend\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|c:\\users\\p52\\desktop\\sauvio1\\sauvio-backend\\service\\finance\\financeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|solutionrelative:service\\finance\\financeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|c:\\users\\p52\\desktop\\sauvio1\\sauvio-backend\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|solutionrelative:migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|c:\\users\\p52\\desktop\\sauvio1\\sauvio-backend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|c:\\users\\p52\\desktop\\sauvio1\\sauvio-backend\\controllers\\financecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|solutionrelative:controllers\\financecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|c:\\users\\p52\\desktop\\sauvio1\\sauvio-backend\\service\\finance\\financeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|solutionrelative:service\\finance\\financeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|c:\\users\\p52\\desktop\\sauvio1\\sauvio-backend\\service\\finance\\ifinanceservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -33,10 +37,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|c:\\users\\p52\\desktop\\sauvio1\\sauvio-backend\\service\\account\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|solutionrelative:service\\account\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|c:\\users\\p52\\desktop\\sauvio1\\sauvio-backend\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|solutionrelative:controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7A9FBC65-B982-4404-946A-382692F942FE}|Sauvio.csproj|c:\\users\\p52\\desktop\\sauvio1\\sauvio-backend\\dto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -82,11 +82,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "AppDbContextModelSnapshot.cs",
               "DocumentMoniker": "C:\\Users\\P52\\Desktop\\Sauvio1\\sauvio-backend\\Migrations\\AppDbContextModelSnapshot.cs",
               "RelativeDocumentMoniker": "Migrations\\AppDbContextModelSnapshot.cs",
@@ -99,20 +99,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "FinanceService.cs",
               "DocumentMoniker": "C:\\Users\\P52\\Desktop\\Sauvio1\\sauvio-backend\\Service\\Finance\\FinanceService.cs",
               "RelativeDocumentMoniker": "Service\\Finance\\FinanceService.cs",
               "ToolTip": "C:\\Users\\P52\\Desktop\\Sauvio1\\sauvio-backend\\Service\\Finance\\FinanceService.cs",
               "RelativeToolTip": "Service\\Finance\\FinanceService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACUAAABmAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-07T15:30:10.275Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "IFinanceService.cs",
               "DocumentMoniker": "C:\\Users\\P52\\Desktop\\Sauvio1\\sauvio-backend\\Service\\Finance\\IFinanceService.cs",
               "RelativeDocumentMoniker": "Service\\Finance\\IFinanceService.cs",
@@ -125,20 +125,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "FinanceController.cs",
               "DocumentMoniker": "C:\\Users\\P52\\Desktop\\Sauvio1\\sauvio-backend\\Controllers\\FinanceController.cs",
               "RelativeDocumentMoniker": "Controllers\\FinanceController.cs",
               "ToolTip": "C:\\Users\\P52\\Desktop\\Sauvio1\\sauvio-backend\\Controllers\\FinanceController.cs",
               "RelativeToolTip": "Controllers\\FinanceController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-07T15:29:15.895Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "TransactionDTO.cs",
               "DocumentMoniker": "C:\\Users\\P52\\Desktop\\Sauvio1\\sauvio-backend\\Dto\\TransactionDTO.cs",
               "RelativeDocumentMoniker": "Dto\\TransactionDTO.cs",
@@ -151,7 +151,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "AccountService.cs",
               "DocumentMoniker": "C:\\Users\\P52\\Desktop\\Sauvio1\\sauvio-backend\\Service\\Account\\AccountService.cs",
               "RelativeDocumentMoniker": "Service\\Account\\AccountService.cs",
@@ -164,7 +164,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\P52\\Desktop\\Sauvio1\\sauvio-backend\\Model\\User\\User.cs",
               "RelativeDocumentMoniker": "Model\\User\\User.cs",
@@ -189,7 +189,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 1,
               "Title": "AccountController.cs",
               "DocumentMoniker": "C:\\Users\\P52\\Desktop\\Sauvio1\\sauvio-backend\\Controllers\\AccountController.cs",
               "RelativeDocumentMoniker": "Controllers\\AccountController.cs",
@@ -226,7 +226,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\P52\\Desktop\\Sauvio1\\sauvio-backend\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",

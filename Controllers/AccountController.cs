@@ -41,6 +41,14 @@ namespace Sauvio.Controllers
             return BadRequest(message);
         }
 
+        [HttpPost("change-password")]
+        public async Task<IActionResult> ChangePassword([FromBody] ChangePasswordDTO dto)
+        {
+            var result = await _accountService.ChangePassword(dto);
+            return result.Success ? Ok(result.Message) : BadRequest(result.Message);
+        }
+
+
     }
 
 }

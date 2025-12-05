@@ -1,4 +1,5 @@
 ﻿using Sauvio.Dto;
+using Sauvio.Models.User;
 
 namespace Sauvio.Services.Finance
 {
@@ -6,6 +7,9 @@ namespace Sauvio.Services.Finance
     {
         Task<(bool Success, string Message)> AddIncome(TransactionDTO dto);
         Task<(bool Success, string Message)> AddExpense(TransactionDTO dto);
+
+        Task<List<Transaction>> GetExpenses(int userId);
+        Task<List<Transaction>> GetIncomes(int userId);
         Task<object> GetBalance(int userId);
     }
 }

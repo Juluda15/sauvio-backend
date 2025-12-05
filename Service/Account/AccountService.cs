@@ -79,6 +79,17 @@ namespace Sauvio.Services.Account
 
             return "Email confirmed successfully!";
         }
+
+        public async Task<(bool Success, string Message)> ChangePassword(ChangePasswordDTO dto)
+        {
+            var user = await _db.Users.FindAsync(dto.UserId);
+            if (user == null) return (false, "User not found");
+
+            user.Password = BCrypt.Net.BCrypt.HashPassword(dto.NewPassword);
+            await _db.SaveChangesAsync();
+            return (true, "Password updated successfully");
+        }
+
     }
 }
 

@@ -5,36 +5,52 @@ using Sauvio.Dto;
 namespace Sauvio.Controllers
 {
     [ApiController]
-    [Route("api/finance")]
+    [Route("api/[controller]")]
     public class FinanceController : ControllerBase
     {
-        private readonly IFinanceService _financeService;
+        private readonly IFinanceService _finance;
 
-        public FinanceController(IFinanceService financeService)
+        public FinanceController(IFinanceService finance)
         {
-            _financeService = financeService;
+            _finance = finance;
         }
 
-        [HttpPost("income")]
-        public async Task<IActionResult> AddIncome([FromBody] TransactionDTO dto)
+        [HttpPost("transaction")]
+        public async Task<IActionResult> AddTransaction(TransactionDTO dto)
         {
-            var result = await _financeService.AddIncome(dto);
-            return result.Success ? Ok(result.Message) : BadRequest(result.Message);
+            if (dto.Type == "income")
+            {
+                var result = await _finance.AddIncome(dto);
+                return result.Success ? Ok(result) : BadRequest(result);
+            }
+            else if (dto.Type == "expense")
+            {
+                var result = await _finance.AddExpense(dto);
+                return result.Success ? Ok(result) : BadRequest(result);
+            }
+
+            return BadRequest("Invalid transaction type. Must be 'income' or 'expense'.");
         }
 
-        [HttpPost("expense")]
-        public async Task<IActionResult> AddExpense([FromBody] TransactionDTO dto)
+        [HttpGet("expenses/{userId}")]
+        public async Task<IActionResult> GetExpenses(int userId)
         {
-            var result = await _financeService.AddExpense(dto);
-            return result.Success ? Ok(result.Message) : BadRequest(result.Message);
+            var result = await _finance.GetExpenses(userId);
+            return Ok(result);
+        }
+
+        [HttpGet("incomes/{userId}")]
+        public async Task<IActionResult> GetIncomes(int userId)
+        {
+            var result = await _finance.GetIncomes(userId);
+            return Ok(result);
         }
 
         [HttpGet("balance/{userId}")]
         public async Task<IActionResult> GetBalance(int userId)
         {
-            var result = await _financeService.GetBalance(userId);
-            return Ok(result);
+            var user = await _finance.GetBalance(userId);
+            return Ok(user);
         }
-
     }
 }

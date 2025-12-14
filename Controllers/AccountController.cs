@@ -1,5 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
 using Sauvio.Dto;
 using Sauvio.Services.Account;
 
@@ -47,8 +46,5 @@ namespace Sauvio.Controllers
             var result = await _accountService.ChangePassword(dto);
             return result.Success ? Ok(result.Message) : BadRequest(result.Message);
         }
-
-
     }
-
 }

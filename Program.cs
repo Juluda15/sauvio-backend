@@ -1,20 +1,21 @@
-using Microsoft.AspNetCore.Identity.UI.Services;
-using Microsoft.EntityFrameworkCore;
-using Sauvio.Data;
 using Sauvio.Services.Account;
 using Sauvio.Services.Email;
 using Sauvio.Services.Finance;
+using SauvioData;
+using SauvioData.Data;
+using SauvioData.Interfaces;
+using SuavioData.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
-
-builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 
 builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddScoped<IEmailService, EmailService>();
 builder.Services.AddScoped<IFinanceService, FinanceService>();
+builder.Services.AddSingleton<DbConnectionFactory>();
+builder.Services.AddScoped<IFinanceData, FinanceData>();
+builder.Services.AddScoped<IAccountData, AccountData>();
 
 
 builder.Services.AddControllers();

@@ -1,95 +1,72 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Sauvio.Data;
-using Sauvio.Dto;
-using Sauvio.Models.User;
+﻿using Sauvio.Dto;
+using SuavioData.Interfaces;
+using SauvioData.Models;
 using Sauvio.Services.Email;
-using BCrypt.Net;
 
 
 namespace Sauvio.Services.Account
 {
     public class AccountService : IAccountService
     {
-        private readonly AppDbContext _db;
-        private readonly IEmailService _emailService;
+        private readonly IAccountData _data;
+        private readonly IEmailService _email;
 
-        public AccountService(AppDbContext dbContext, IEmailService emailService)
+        public AccountService(IAccountData data, IEmailService email)
         {
-            _db = dbContext;
-            _emailService = emailService;
+            _data = data;
+            _email = email;
         }
 
         public async Task<string> Register(RegisterDTO dto)
         {
-            var existing = await _db.Users.FirstOrDefaultAsync(u => u.Email == dto.Email);
-            if (existing != null)
+            if (await _data.GetByEmail(dto.Email) != null)
                 return "Email already registered";
 
-            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(dto.Password);
             var token = Guid.NewGuid().ToString();
 
-            var newUser = new User
+            var user = new User
             {
                 Name = dto.Name,
                 Email = dto.Email,
-                Password = hashedPassword,
-                ConfirmationToken = token,
-                IsConfirmed = false
+                Password = BCrypt.Net.BCrypt.HashPassword(dto.Password),
+                ConfirmationToken = token
             };
 
-            _db.Users.Add(newUser);
-            await _db.SaveChangesAsync();
+            await _data.CreateUser(user);
+            _email.SendConfirmationEmail(dto.Email, token);
 
-            _emailService.SendConfirmationEmail(dto.Email, token);
-
-            return "Registration successful. Please check your email to confirm.";
-        }
-
-        public async Task<(bool Success, string Message, User? User)> Login(LoginDTO dto)
-        {
-            var user = await _db.Users.FirstOrDefaultAsync(u => u.Email == dto.Email);
-
-            if (user == null || !user.IsConfirmed)
-                return (false, "Invalid or unconfirmed credentials", null);
-
-            bool match = BCrypt.Net.BCrypt.Verify(dto.Password, user.Password);
-            return match ? (true, "Login successful", user) : (false, "Invalid credentials", null);
+            return "Registration successful. Please check your email.";
         }
 
         public async Task<string> ConfirmEmail(string token)
         {
-            var user = await _db.Users.FirstOrDefaultAsync(u => u.ConfirmationToken == token);
+            var user = await _data.GetByToken(token);
+            if (user == null) return "Invalid or expired token";
 
-            if (user == null)
-            {
-                var alreadyConfirmed = await _db.Users
-                    .FirstOrDefaultAsync(u => u.IsConfirmed && u.ConfirmationToken == null);
-
-                if (alreadyConfirmed != null)
-                    return "Email already confirmed.";
-                else
-                    return "Invalid token";
-            }
-
-            user.IsConfirmed = true;
-            user.ConfirmationToken = null;
-
-            _db.Users.Update(user);
-            await _db.SaveChangesAsync();
-
+            await _data.ConfirmUser(user.Id);
             return "Email confirmed successfully!";
+        }
+
+        public async Task<(bool Success, string Message, User? User)> Login(LoginDTO dto)
+        {
+            var user = await _data.GetByEmail(dto.Email);
+            if (user == null || !user.IsConfirmed)
+                return (false, "Invalid credentials", null);
+
+            return BCrypt.Net.BCrypt.Verify(dto.Password, user.Password)
+                ? (true, "Login successful", user)
+                : (false, "Invalid credentials", null);
         }
 
         public async Task<(bool Success, string Message)> ChangePassword(ChangePasswordDTO dto)
         {
-            var user = await _db.Users.FindAsync(dto.UserId);
+            var user = await _data.GetById(dto.UserId);
             if (user == null) return (false, "User not found");
 
-            user.Password = BCrypt.Net.BCrypt.HashPassword(dto.NewPassword);
-            await _db.SaveChangesAsync();
-            return (true, "Password updated successfully");
-        }
+            var hashedPassword = BCrypt.Net.BCrypt.HashPassword(dto.NewPassword);
+            await _data.UpdatePassword(user.Id, hashedPassword);
 
+            return (true, "Password changed successfully");
+        }
     }
 }
-

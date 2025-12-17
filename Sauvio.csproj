@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SauvioData\SauvioData.csproj" />
+    <ProjectReference Include="..\Sauvio.Business\Sauvio.Business.csproj" />
   </ItemGroup>
 
 </Project>

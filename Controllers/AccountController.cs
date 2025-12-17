@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Sauvio.Dto;
-using Sauvio.Services.Account;
+using Sauvio.Business.Dto;
+using Sauvio.Business.Services.Account;
 
 namespace Sauvio.Controllers
 {

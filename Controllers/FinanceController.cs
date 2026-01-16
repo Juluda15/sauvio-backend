@@ -121,36 +121,5 @@ namespace Sauvio.Controllers
             }
         }
 
-        [Authorize(Roles = "Admin")]
-        [HttpPost("me/transaction")]
-        public async Task<IActionResult> AddMyTransaction(TransactionDTO dto)
-        {
-            var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
-            dto.UserId = userId;
-
-            try
-            {
-                if (dto.Type == "income")
-                {
-                    await _finance.AddIncome(dto);
-                    return Ok(new { message = "Income added successfully" });
-                }
-                else if (dto.Type == "expense")
-                {
-                    await _finance.AddExpense(dto);
-                    return Ok(new { message = "Expense added successfully" });
-                }
-
-                return BadRequest(new { message = "Invalid transaction type. Must be 'income' or 'expense'." });
-            }
-            catch (ValidationException ex)
-            {
-                return BadRequest(new { message = ex.Message });
-            }
-            catch (NotFoundException ex)
-            {
-                return NotFound(new { message = ex.Message });
-            }
-        }
     }
 }

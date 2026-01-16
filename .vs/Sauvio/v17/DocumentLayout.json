@@ -117,8 +117,7 @@
               "RelativeToolTip": "..\\Sauvio.Business\\Service\\Account\\AccountService.cs",
               "ViewState": "AgIAAFUAAAAAAAAAAAAAAIUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T08:51:51.797Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T08:51:51.797Z"
             },
             {
               "$type": "Document",
@@ -130,8 +129,7 @@
               "RelativeToolTip": "..\\Sauvio.Business\\Service\\Finance\\FinanceService.cs",
               "ViewState": "AgIAAEgAAAAAAAAAAAAgwHoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-13T10:37:53.431Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-13T10:37:53.431Z"
             },
             {
               "$type": "Document",
@@ -180,8 +178,7 @@
               "RelativeToolTip": "Controllers\\AdminController.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAAUwFMAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-15T14:07:42.397Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-15T14:07:42.397Z"
             },
             {
               "$type": "Document",
@@ -193,8 +190,7 @@
               "RelativeToolTip": "..\\Sauvio.Business\\Dto\\LoginDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T08:55:56.83Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T08:55:56.83Z"
             },
             {
               "$type": "Document",
@@ -206,8 +202,7 @@
               "RelativeToolTip": "..\\Sauvio.Business\\Dto\\TransactionDTO.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T08:56:07.474Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T08:56:07.474Z"
             },
             {
               "$type": "Document",
@@ -219,8 +214,7 @@
               "RelativeToolTip": "Controllers\\AccountController.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAQwEwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-16T08:55:07.866Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-16T08:55:07.866Z"
             },
             {
               "$type": "Document",
@@ -232,8 +226,7 @@
               "RelativeToolTip": "..\\SauvioData\\Interfaces\\IAccountData.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-14T12:24:05.425Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-12-14T12:24:05.425Z"
             },
             {
               "$type": "Document",
@@ -245,8 +238,7 @@
               "RelativeToolTip": "..\\SauvioData\\Entities\\Transaction.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-12T06:16:52.424Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-12T06:16:52.424Z"
             },
             {
               "$type": "Document",
